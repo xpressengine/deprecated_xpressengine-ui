@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Button - XE UI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!-- normalize -->
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0/normalize.css">
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3/xeicon.min.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>normal</legend>
+        <input type="button" value="input button">
+        <button type="button">button</button>
+        <button type="submit">submit button</button>
+        <button type="reset">submit button</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>button 조합</legend>
+
+        <p>버튼 + 버튼 + 버튼 (그룹아님)</p>
+        <div>
+            <button type="button">button</button>
+            <button type="submit">button</button>
+            <button type="reset">button</button>
+        </div>
+
+        <p>버튼 + 링크버튼 + 버튼</p>
+        <div>
+            <button type="button">button</button>
+            <a href="#link" role="button">링크지만 button</a>
+            <button type="button">button</button>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>button에 추가 요소</legend>
+        <h3>아이콘</h3>
+        <button><i class="xi-home"></i>집앞에</button>
+        <button>집뒤에<i class="xi-home"></i></button>
+    </fieldset>
+
+</body>
+</html>

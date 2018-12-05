@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Typography - XE UI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!-- normalize -->
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0/normalize.css">
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3/xeicon.min.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Heading</legend>
+        <h1>h1. XE UI Heading</h1>
+        <h2>h2. XE UI Heading</h2>
+        <h2>h2. XE UI Heading <small>small 태그가 붙을 수 있다</small></h2>
+        <h3>h3. XE UI Heading</h3>
+        <h4>h4. XE UI Heading</h4>
+        <h5>h5. XE UI Heading</h5>
+        <h6>h6. XE UI Heading</h6>
+    </fieldset>
+
+    <fieldset>
+        <legend>link</legend>
+        <p>p 태그 안에 들어가는 평범한 <a href="#link">링크</a></p>
+        <h3>h3 태그 안에 들어가는 <a href="#link">링크</a></h3>
+        <ul>
+            <li>li 태그 안에 들어가는 <a href="#link">링크</a></li>
+        </ul>
+        <strong>스트롱 <a href="#link">링크</a></strong>
+        <em>기울어진 <a href="#link">링크</a></em>
+    </fieldset>
+
+    <fieldset>
+        <legend>이미지</legend>
+        <img src="https://placeimg.com/320/240/any">
+        <p><img src="https://placeimg.com/320/240/any"> 이미지 옆에 텍스트가 지나가...</p>
+        <p>
+            이미지 + 이미지
+            <br>
+            <img src="https://placeimg.com/320/240/any">
+            <img src="https://placeimg.com/320/240/any">
+        </p>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>inline text</legend>
+        <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+        <p><del>This line of text is meant to be treated as deleted text.</del></p>
+        <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+        <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+        <p><u>This line of text will render as underlined</u></p>
+        <p><small>This line of text is meant to be treated as fine print.</small></p>
+        <p><strong>This line rendered as bold text.</strong></p>
+        <p><em>This line rendered as italicized text.</em></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>blockquote</legend>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Paragraph</legend>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p># margin은 한 방향으로만 정의하며, 요소간의 조합(h1 + p, p + p, p + ul 등)에 따라 적절한 조정이 필요할 수 있다. # 대통령의 임기연장 또는 중임변경을 위한 헌법개정은 그 헌법개정 제안 당시의 대통령에 대하여는 효력이 없다. 대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다.</p>
+
+        <xmp>
+            <p>...</p>
+            <p>...</p>
+        </xmp>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Heading + Paragraph</legend>
+        <h1>h1. XE UI Heading</h1>
+        <p>외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 대법원과 각급법원의 조직은 법률로 정한다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다.</p>
+
+        <xmp>
+            <h1>...</h1>
+            <p>...</p>
+        </xmp>
+    </fieldset>
+
+    <fieldset>
+        <legend>List (ul)</legend>
+        <ul>
+            <li>List Item</li>
+            <li># list-style이나</li>
+            <li># margin, padding이 제거되면 안 된다</li>
+            <li>
+                List Item
+                <ul>
+                    <li>List Item</li>
+                    <li>
+                        List Item
+                        <ul>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ul>
+                    </li>
+                    <li>List Item</li>
+                </ul>
+            </li>
+            <li>리스트 아이템</li>
+            <li>리스트 아이템</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Defined List</legend>
+        <dl>
+            <dt>Description lists</dt>
+            <dd>A description list is perfect for defining terms.</dd>
+
+            <dt>Euismod</dt>
+            <dd>
+                <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+                <p>Donec id elit non mi porta gravida at eget metus.</p>
+            </dd>
+
+            <dt>Malesuada porta</dt>
+            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+
+            <dt>Truncated term is truncated</dt>
+            <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+
+            <dt>Nesting</dt>
+            <dd>
+                <dl>
+                    <dt>Nested definition list</dt>
+                    <dd>Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+                </dl>
+            </dd>
+        </dl>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>List (ol)</legend>
+        <ol>
+            <li>List Item</li>
+            <li>리스트 아이템</li>
+            <li>List Item</li>
+            <li>
+                List Item
+                <ol>
+                    <li>List Item</li>
+                    <li>
+                        List Item
+                        <ol>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ol>
+                    </li>
+                    <li>List Item</li>
+                </ol>
+            </li>
+            <li>리스트 아이템</li>
+            <li>리스트 아이템</li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <legend>List (ul, ol)</legend>
+        <p><code>&lt;p&gt;</code>태그 다음에 리스트가 올 수 있고</p>
+        <ul>
+            <li>List Item</li>
+            <li>리스트 아이템</li>
+            <li>List Item</li>
+            <li>
+                List Item
+                <ol>
+                    <li>List Item</li>
+                    <li>
+                        List Item
+                        <ul>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ul>
+                    </li>
+                    <li>List Item</li>
+                </ol>
+            </li>
+            <li>리스트 아이템</li>
+            <li>리스트 아이템</li>
+        </ul>
+        <p>리스트 다음에 <code>&lt;p&gt;</code>태그가 올 수 있다.</p>
+    </fieldset>
+
+    <fieldset>
+        <legend>List + List</legend>
+        <ol>
+            <li>List Item</li>
+            <li>리스트 아이템</li>
+            <li>리스트 아이템</li>
+        </ol>
+        <ul>
+            <li>List Item</li>
+            <li>리스트 아이템</li>
+            <li>리스트 아이템</li>
+        </ul>
+        <ul>
+            <li>List Item</li>
+            <li>리스트 아이템</li>
+            <li>리스트 아이템</li>
+        </ul>
+        <ol>
+            <li>List Item</li>
+            <li>리스트 아이템</li>
+            <li>리스트 아이템</li>
+        </ol>
+        <ol>
+            <li>List Item</li>
+            <li>리스트 아이템</li>
+            <li>리스트 아이템</li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <legend>Heading + List</legend>
+        <h1>h1. Heading 제목</h1>
+        <ul>
+            <li>List Item. 리스트 아이템</li>
+            <li>List Item. 리스트 아이템</li>
+        </ul>
+
+        <h2>h2. Heading 제목</h2>
+        <ul>
+            <li>List Item. 리스트 아이템</li>
+            <li>List Item. 리스트 아이템</li>
+        </ul>
+
+        <p>중간에 paragraph가 끼어 들어가도</p>
+        <p>적절한 여백으로 어울려야 한다.</p>
+
+        <h3>h3. Heading 제목</h3>
+        <ul>
+            <li>List Item. 리스트 아이템</li>
+            <li>List Item. 리스트 아이템</li>
+        </ul>
+
+        <h4>h4. Heading 제목</h4>
+        <ul>
+            <li>List Item. 리스트 아이템</li>
+            <li>List Item. 리스트 아이템</li>
+        </ul>
+    </fieldset>
+</body>
+</html>
