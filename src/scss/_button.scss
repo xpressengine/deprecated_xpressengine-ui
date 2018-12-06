@@ -1,0 +1,15 @@
+.#{$prefix}button {
+  display: inline-block;
+  border: 1px solid red; // @fixme
+  color: black; // @fixme
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+// Colors
+.#{$prefix}button {
+  &--primary {
+    color: blue; // @fixme
+  }
+}
