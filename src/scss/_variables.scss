@@ -1,0 +1,4 @@
+// prefix
+$prefix-word: 'xu' !default;
+$prefix-seperator: '-' !default;
+$prefix: $prefix-word + $prefix-seperator !default;
