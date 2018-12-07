@@ -1,15 +1,55 @@
-.#{$prefix}button {
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  &.#{$prefix}-button {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+.#{$prefix}-button {
   display: inline-block;
-  border: 1px solid red; // @fixme
+  border: 0 none;
   color: black; // @fixme
   text-align: center;
   vertical-align: middle;
   background-color: transparent;
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
 }
 
 // Colors
-.#{$prefix}button {
-  &--primary {
-    color: blue; // @fixme
+.#{$prefix}-button {
+  // @fixme
+  &--primary,
+  &--secondary,
+  &--info,
+  &--light,
+  &--dark,
+  &--danger {
+    border: 1px solid $red;
+  }
+  &--primary { color: $primary; }
+  &--secondary { color: $secondary; }
+  &--info { color: $info; }
+  &--light { color: $light; }
+  &--dark { color: $dark; }
+  &--danger { color: $danger; }
+
+  &--outline {
+    border: 1px solid $red;
+
+    &-primary,
+    &-secondary,
+    &-info,
+    &-light,
+    &-dark,
+    &-danger {
+      border: 1px solid $red;
+    }
   }
 }

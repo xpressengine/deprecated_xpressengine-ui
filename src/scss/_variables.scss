@@ -1,4 +1,16 @@
 // prefix
-$prefix-word: 'xu' !default;
-$prefix-seperator: '-' !default;
-$prefix: $prefix-word + $prefix-seperator !default;
+$prefix: 'xu' !default;
+
+// colors
+$black: #000 !default;
+$white: #fff !default;
+$blue: blue !default;
+$green: green !default;
+$red: red !default;
+
+$primary: $blue !default;
+$secondary: $green !default;
+$danger: $red !default;
+$info: $black !default;
+$light: $black !default;
+$dark: $black !default;
