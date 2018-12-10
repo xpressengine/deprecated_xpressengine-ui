@@ -1,0 +1,46 @@
+// Container
+.#{$prefix}-container,
+.#{$prefix}-container-fluid {
+  width: 100%;
+  padding-right: ($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .#{$prefix}-container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .#{$prefix}-container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .#{$prefix}-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .#{$prefix}-container {
+    max-width: 1140px;
+  }
+}
+
+.#{$prefix}-container-fluid {
+  max-width: 100%;
+}
+
+
+// Row
+.#{$prefix}-row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: ($grid-gutter-width / 2 * -1);
+  margin-left: ($grid-gutter-width / 2 * -1);
+}
+
+// Grid
+@include make-grid-columns();

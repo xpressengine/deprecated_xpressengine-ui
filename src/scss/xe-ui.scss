@@ -1,6 +1,9 @@
+@import 'functions';
 @import 'variables';
+@import "mixins";
 @import 'normalize';
 @import 'reboot';
 
 // Components
+@import 'grid';
 @import 'button';

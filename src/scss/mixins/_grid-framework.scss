@@ -16,52 +16,96 @@
     padding-left: ($gutter / 2);
   }
 
+  // column에 %grid-column 적용
+  .#{$prefix}-column,
+  [class*='#{$prefix}-column--'] {
+    @extend %grid-column;
+  }
+
+  // breakpoint별 class 생성
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-    // Allow columns to stretch full width below their breakpoints
-    @for $i from 1 through $columns {
-      .col#{$infix}-#{$i} {
-        @extend %grid-column;
+    @include media-breakpoint-only('xs') {
+      .#{$prefix}-column {
+        flex-basis: 100%;
+        flex-grow: 1;
+        max-width: 100%;
       }
-    }
-    .col#{$infix},
-    .col#{$infix}-auto {
-      @extend %grid-column;
     }
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
-      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-      .col#{$infix} {
+      // Provide basic `.#{$prefix}-column-{bp}` classes for equal-width flexbox columns
+      .#{$prefix}-column#{$infix} {
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
       }
-      .col#{$infix}-auto {
-        flex: 0 0 auto;
-        width: auto;
-        max-width: 100%; // Reset earlier grid tiers
-      }
 
-      @for $i from 1 through $columns {
-        .col#{$infix}-#{$i} {
-          @include make-col($i, $columns);
+      @if ($infix == "") {
+        [class*='#{$prefix}-column--'] {
+          flex-basis: 100%;
+          flex-grow: 0;
         }
       }
 
-      .order#{$infix}-first { order: -1; }
+      @for $i from 1 through $columns {
+        @if ($infix == "") {
+          .#{$prefix}-row--column-#{$i} {
+            .#{$prefix}-column {
+              flex-basis: 100% * (1 / $i);
+              flex-grow: 0;
+            }
+          }
+        } @else {
+          .#{$prefix}-row#{$infix}-column-#{$i} {
+            .#{$prefix}-column {
+              flex-basis: 100% * (1 / $i);
+              flex-grow: 0;
+            }
+          }
+        }
 
-      .order#{$infix}-last { order: $columns + 1; }
+        .#{$prefix}-row {
+          @if ($infix == "") {
+            .#{$prefix}-column--#{$i} {
+              @include make-col($i, $columns);
+            }
+          } @else {
+            .#{$prefix}-column#{$infix}-#{$i} {
+              @include make-col($i, $columns);
+            }
+          }
+        }
+      }
+
+      @if ($infix == "") {
+        .#{$prefix}-order--first { order: -1; }
+        .#{$prefix}-order--last { order: $columns + 1; }
+      } @else {
+        .#{$prefix}-order#{$infix}-first { order: -1; }
+        .#{$prefix}-order#{$infix}-last { order: $columns + 1; }
+      }
 
       @for $i from 0 through $columns {
-        .order#{$infix}-#{$i} { order: $i; }
+        @if ($infix == "") {
+          .#{$prefix}-order--#{$i} { order: $i; }
+        } @else {
+          .#{$prefix}-order#{$infix}-#{$i} { order: $i; }
+        }
       }
 
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
         @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
-          .offset#{$infix}-#{$i} {
-            @include make-col-offset($i, $columns);
+          @if ($infix == "") {
+            .#{$prefix}-offset--#{$i} {
+              @include make-col-offset($i, $columns);
+            }
+          } @else {
+            .#{$prefix}-offset#{$infix}-#{$i} {
+              @include make-col-offset($i, $columns);
+            }
           }
         }
       }
