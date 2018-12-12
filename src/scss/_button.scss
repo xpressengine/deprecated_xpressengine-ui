@@ -11,45 +11,41 @@ input[type=reset] {
 
 .#{$prefix}-button {
   display: inline-block;
-  border: 0 none;
+  user-select: none;
+  border: 1px solid transparent;
   color: black; // @fixme
   text-align: center;
+  text-decoration: none;
   vertical-align: middle;
   background-color: transparent;
 
   &:not([disabled]) {
     cursor: pointer;
   }
+
+  &--link {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 
 // Colors
-.#{$prefix}-button {
-  // @fixme
-  &--primary,
-  &--secondary,
-  &--info,
-  &--light,
-  &--dark,
-  &--danger {
-    border: 1px solid $red;
-  }
-  &--primary { color: $primary; }
-  &--secondary { color: $secondary; }
-  &--info { color: $info; }
-  &--light { color: $light; }
-  &--dark { color: $dark; }
-  &--danger { color: $danger; }
+@each $color, $value in $theme-colors {
+  .#{$prefix}-button {
+    &--#{$color} {
+      border-color: $value;
+      color: $white;
+      background-color: $value;
+    }
 
-  &--outline {
-    border: 1px solid $red;
-
-    &-primary,
-    &-secondary,
-    &-info,
-    &-light,
-    &-dark,
-    &-danger {
-      border: 1px solid $red;
+    // outline
+    &--outline {
+      border-color: red; // @fixme
+    }
+    &--outline-#{$color} {
+      border-color: $value;
     }
   }
 }
