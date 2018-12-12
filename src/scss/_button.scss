@@ -1,13 +1,8 @@
-button,
-input[type=button],
-input[type=submit],
-input[type=reset] {
-  &.#{$prefix}-button {
+.#{$prefix}-button {
     margin: 0;
     padding: 0;
     border-radius: 0;
   }
-}
 
 .#{$prefix}-button {
   display: inline-block;
@@ -17,10 +12,29 @@ input[type=reset] {
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  line-height: 30px;
+  padding: .2rem .6rem;
+  border-radius: 0.3rem;
   background-color: transparent;
 
   &:not([disabled]) {
     cursor: pointer;
+  }
+
+  &--large {
+    padding: .5rem 1rem;
+  }
+
+  &--small {
+    padding: 0 .5rem;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+    &+.xu-button--block {
+      margin-top: .25rem;
+    }
   }
 
   &--link {
@@ -28,6 +42,11 @@ input[type=reset] {
     &:focus {
       text-decoration: underline;
     }
+  }
+
+  &__icon {
+    width: 1.875rem;
+    height: 1.875rem;
   }
 }
 
