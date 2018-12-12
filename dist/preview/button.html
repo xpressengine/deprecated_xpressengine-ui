@@ -13,135 +13,137 @@
 </head>
 
 <body>
-    <fieldset>
-        <legend>native</legend>
-        <p>얘네들은 영향을 받으면 안 됨</p>
-        <input type="button" value="input button">
-        <input type="submit" value="input submit">
-        <input type="reset" value="input reset">
-        <button type="button">button button</button>
-        <button type="submit">button submit</button>
-        <button type="reset">button reset</button>
-        <a href="#link" role="button">a link</a>
-    </fieldset>
+    <div class="xu-container">
+        <fieldset>
+            <legend>native</legend>
+            <p>얘네들은 영향을 받으면 안 됨</p>
+            <input type="button" value="input button">
+            <input type="submit" value="input submit">
+            <input type="reset" value="input reset">
+            <button type="button">button button</button>
+            <button type="submit">button submit</button>
+            <button type="reset">button reset</button>
+            <a href="#link" role="button">a link</a>
+        </fieldset>
 
-    <fieldset>
-        <legend>normal</legend>
-        <input type="button" class="xu-button xu-button--primary" value="input button">
-        <input type="submit" class="xu-button xu-button--primary" value="input submit">
-        <input type="reset" class="xu-button xu-button--primary" value="input reset">
-        <button type="button" class="xu-button xu-button--primary">button button</button>
-        <button type="submit" class="xu-button xu-button--primary">button submit</button>
-        <button type="reset" class="xu-button xu-button--primary">button reset</button>
-        <a class="xu-button xu-button--primary" href="#link" role="button">a link</a>
-    </fieldset>
+        <fieldset>
+            <legend>normal</legend>
+            <input type="button" class="xu-button xu-button--primary" value="input button">
+            <input type="submit" class="xu-button xu-button--primary" value="input submit">
+            <input type="reset" class="xu-button xu-button--primary" value="input reset">
+            <button type="button" class="xu-button xu-button--primary">button button</button>
+            <button type="submit" class="xu-button xu-button--primary">button submit</button>
+            <button type="reset" class="xu-button xu-button--primary">button reset</button>
+            <a class="xu-button xu-button--primary" href="#link" role="button">a link</a>
+        </fieldset>
 
-    <fieldset>
-        <legend>컬러, link</legend>
-        <button class="xu-button">(default)</button>
-        <button class="xu-button xu-button--primary">primary</button>
-        <button class="xu-button xu-button--secondary">secondary</button>
-        <button class="xu-button xu-button--info">info</button>
-        <button class="xu-button xu-button--danger">danger</button>
-        <button class="xu-button xu-button--light">light</button>
-        <button class="xu-button xu-button--dark">dark</button>
+        <fieldset>
+            <legend>컬러, link</legend>
+            <button class="xu-button">(default)</button>
+            <button class="xu-button xu-button--primary">primary</button>
+            <button class="xu-button xu-button--secondary">secondary</button>
+            <button class="xu-button xu-button--info">info</button>
+            <button class="xu-button xu-button--danger">danger</button>
+            <button class="xu-button xu-button--light">light</button>
+            <button class="xu-button xu-button--dark">dark</button>
 
-        <button class="xu-button xu-button--link">link</button>
-    </fieldset>
+            <button class="xu-button xu-button--link">link</button>
+        </fieldset>
 
-    <fieldset>
-        <legend>outline</legend>
-        <button class="xu-button xu-button--outline">(outline, default)</button>
-        <button class="xu-button xu-button--outline-primary">outline-primary</button>
-        <button class="xu-button xu-button--outline-secondary">outline-secondary</button>
-        <button class="xu-button xu-button--outline-info">outline-info</button>
-        <button class="xu-button xu-button--outline-danger">outline-danger</button>
-        <button class="xu-button xu-button--outline-light">outline-light</button>
-        <button class="xu-button xu-button--outline-dark">outline-dark</button>
-    </fieldset>
+        <fieldset>
+            <legend>outline</legend>
+            <button class="xu-button xu-button--outline">(outline, default)</button>
+            <button class="xu-button xu-button--outline-primary">outline-primary</button>
+            <button class="xu-button xu-button--outline-secondary">outline-secondary</button>
+            <button class="xu-button xu-button--outline-info">outline-info</button>
+            <button class="xu-button xu-button--outline-danger">outline-danger</button>
+            <button class="xu-button xu-button--outline-light">outline-light</button>
+            <button class="xu-button xu-button--outline-dark">outline-dark</button>
+        </fieldset>
 
-    <fieldset>
-        <legend>size</legend>
-        <button class="xu-button xu-button--primary xu-button--large">large</button>
-        <button class="xu-button xu-button--primary">(normal)</button>
-        <button class="xu-button xu-button--primary xu-button--small">small</button>
+        <fieldset>
+            <legend>size</legend>
+            <button class="xu-button xu-button--primary xu-button--large">large</button>
+            <button class="xu-button xu-button--primary">(normal)</button>
+            <button class="xu-button xu-button--primary xu-button--small">small</button>
 
-        <p>outline</p>
-        <button class="xu-button xu-button--outline-primary xu-button--small">small</button>
-        <button class="xu-button xu-button--outline-primary">(normal)</button>
-        <button class="xu-button xu-button--outline-primary xu-button--large">large</button>
-    </fieldset>
+            <p>outline</p>
+            <button class="xu-button xu-button--outline-primary xu-button--small">small</button>
+            <button class="xu-button xu-button--outline-primary">(normal)</button>
+            <button class="xu-button xu-button--outline-primary xu-button--large">large</button>
+        </fieldset>
 
-    <fieldset>
-        <legend>button 배치 (그룹아님)</legend>
+        <fieldset>
+            <legend>button 배치 (그룹아님)</legend>
 
-        <div>
-            <button type="button" class="xu-button xu-button--primary">button</button>
-            <button type="submit" class="xu-button xu-button--primary">button</button>
-            <button type="reset" class="xu-button xu-button--primary">button</button>
-        </div>
+            <div>
+                <button type="button" class="xu-button xu-button--primary">button</button>
+                <button type="submit" class="xu-button xu-button--primary">button</button>
+                <button type="reset" class="xu-button xu-button--primary">button</button>
+            </div>
 
-        <p>버튼 + 링크버튼 + 버튼</p>
-        <div>
-            <button type="button" class="xu-button xu-button--primary">button</button>
-            <a class="xu-button xu-button--primary" href="#link" role="button">링크지만 button</a>
-            <button type="button" class="xu-button xu-button--primary">button</button>
-        </div>
-    </fieldset>
+            <p>버튼 + 링크버튼 + 버튼</p>
+            <div>
+                <button type="button" class="xu-button xu-button--primary">button</button>
+                <a class="xu-button xu-button--primary" href="#link" role="button">링크지만 button</a>
+                <button type="button" class="xu-button xu-button--primary">button</button>
+            </div>
+        </fieldset>
 
-    <fieldset>
-        <legend>block</legend>
-        <button class="xu-button xu-button--block xu-button--primary">primary block</button>
-        <button class="xu-button xu-button--block xu-button--outline-primary">outline-primary block</button>
-    </fieldset>
+        <fieldset>
+            <legend>block</legend>
+            <button class="xu-button xu-button--block xu-button--primary">primary block</button>
+            <button class="xu-button xu-button--block xu-button--outline-primary">outline-primary block</button>
+        </fieldset>
 
-    <fieldset>
-        <legend>disabled</legend>
-        <button class="xu-button xu-button--primary" disabled>primary disabled</button>
-        <button class="xu-button xu-button--outline-primary" disabled>outline-primary disabled</button>
-    </fieldset>
+        <fieldset>
+            <legend>disabled</legend>
+            <button class="xu-button xu-button--primary" disabled>primary disabled</button>
+            <button class="xu-button xu-button--outline-primary" disabled>outline-primary disabled</button>
+        </fieldset>
 
-    <fieldset>
-        <legend>button-group</legend>
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="xu-button xu-button--primary">Left</button>
-            <button type="button" class="xu-button xu-button--primary">Middle</button>
-            <button type="button" class="xu-button xu-button--primary">Right</button>
-        </div>
-    </fieldset>
+        <fieldset>
+            <legend>button-group</legend>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="xu-button xu-button--primary">Left</button>
+                <button type="button" class="xu-button xu-button--primary">Middle</button>
+                <button type="button" class="xu-button xu-button--primary">Right</button>
+            </div>
+        </fieldset>
 
-    <fieldset>
-        <legend>icon (__icon)</legend>
+        <fieldset>
+            <legend>icon (__icon)</legend>
 
-        <button class="xu-button xu-button--primary">
-            <span class="xu-button__icon"><i class="xi-home"></i></span>집앞에
-        </button>
-        <button class="xu-button xu-button--primary">
-            집뒤에<span class="xu-button__icon"><i class="xi-home"></i></span>
-        </button>
+            <button class="xu-button xu-button--primary">
+                <span class="xu-button__icon"><i class="xi-home"></i></span>집앞에
+            </button>
+            <button class="xu-button xu-button--primary">
+                집뒤에<span class="xu-button__icon"><i class="xi-home"></i></span>
+            </button>
 
-        <p>텍스트를 가려 아이콘만 보여야 함</p>
-        <button class="xu-button xu-button--primary">
-            <span class="xu-button__icon"><i class="xi-home"></i></span><span class="xu-sr-only">집앞에</span>
-        </button>
-        <button class="xu-button xu-button--primary">
-            <span class="xu-button__icon"><i class="xi-home"></i></span>
-            <span class="xu-sr-only">집앞에</span>
-        </button>
+            <p>텍스트를 가려 아이콘만 보여야 함</p>
+            <button class="xu-button xu-button--primary">
+                <span class="xu-button__icon"><i class="xi-home"></i></span><span class="xu-sr-only">집앞에</span>
+            </button>
+            <button class="xu-button xu-button--primary">
+                <span class="xu-button__icon"><i class="xi-home"></i></span>
+                <span class="xu-sr-only">집앞에</span>
+            </button>
 
-        <p>아이콘만 있는 버튼임</p>
-        <button class="xu-button">
-            <span class="xu-button__icon"><i class="xi-home"></i></span>
-        </button>
-        <button class="xu-button xu-button--primary">
-            <span class="xu-button__icon"><i class="xi-home"></i></span>
-        </button>
-        <button class="xu-button xu-button--outline">
-            <span class="xu-button__icon"><i class="xi-home"></i></span>
-        </button>
-        <button class="xu-button xu-button--link">
-            <span class="xu-button__icon"><i class="xi-home"></i></span>
-        </button>
-    </fieldset>
+            <p>아이콘만 있는 버튼임</p>
+            <button class="xu-button">
+                <span class="xu-button__icon"><i class="xi-home"></i></span>
+            </button>
+            <button class="xu-button xu-button--primary">
+                <span class="xu-button__icon"><i class="xi-home"></i></span>
+            </button>
+            <button class="xu-button xu-button--outline">
+                <span class="xu-button__icon"><i class="xi-home"></i></span>
+            </button>
+            <button class="xu-button xu-button--link">
+                <span class="xu-button__icon"><i class="xi-home"></i></span>
+            </button>
+        </fieldset>
+    </div>
 </body>
 </html>
