@@ -2,18 +2,51 @@
 $prefix: 'xu' !default;
 
 // colors
+$blue: blue !default; // @fixme temporary
+$green: green !default; // @fixme temporary
+$red: red !default; // @fixme temporary
+
 $black: #000 !default;
 $white: #fff !default;
-$blue: blue !default;
-$green: green !default;
-$red: red !default;
 
-$primary: $blue !default;
-$secondary: $green !default;
-$danger: $red !default;
-$info: $red !default;
-$light: $red !default;
-$dark: $red !default;
+$primary: #345bd9 !default;
+$primary-v50: #e9ecfb !default;
+$primary-v100: #c7cef4 !default;
+$primary-v200: #a1afed !default;
+$primary-v300: #798fe5 !default;
+$primary-v400: #5875df !default;
+$primary-v600: #2e53ce !default;
+$primary-v700: #2248c1 !default;
+$primary-v800: #163db6 !default;
+$primary-v900: #002aa2 !default;
+
+$secondary: #bb2159 !default;
+$secondary-v50: #fbe4ec !default;
+$secondary-v100: #f6bbcf !default;
+$secondary-v200: #f08faf !default;
+$secondary-v300: #eb6390 !default;
+$secondary-v400: #e64478 !default;
+$secondary-v500: #e22762 !default;
+$secondary-v800: #a61d55 !default;
+$secondary-v900: #81174c !default;
+$secondary-v600: #d1245f !default;
+
+$gray-v50: #fafafa !default;
+$gray-v100: #f5f5f5 !default;
+$gray-v200: #eeeeee !default;
+$gray-v300: #e0e0e0 !default;
+$gray-v400: #bdbdbd !default;
+$gray-v500: #9e9e9e !default;
+$gray-v600: #757575 !default;
+$gray-v700: #616161 !default;
+$gray-v800: #424242 !default;
+$gray-v900: #212121 !default;
+
+$dark: $gray-v800 !default;
+$light: $gray-v100 !default;
+
+$info: #40aebf !default;
+$danger: #dd1126 !default;
 
 $theme-colors: (
   'primary':    $primary,
@@ -70,4 +103,4 @@ $container-max-widths: map-merge(
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           30px !default;
+$grid-gutter-width:           24px !default;
