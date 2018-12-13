@@ -88,3 +88,9 @@
 
   @return mix($color-base, $color, $level * $theme-color-interval);
 }
+
+@function color-mask($opacity, $background: #fff, $mask-color: #000) {
+  $rgba: rgba($mask-color, $opacity);
+  $rgb: rgb(red($rgba), green($rgba), blue($rgba));
+  @return mix($rgb, $background, percentage($opacity));
+}
