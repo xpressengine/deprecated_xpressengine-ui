@@ -19,9 +19,9 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  line-height: 1.75rem;
+  line-height: 1.9;
   margin: 0;
-  padding: .25rem 1rem;
+  padding: .25rem .938em;
   border-radius: 0.3rem;
   color: $primary;
   background-color: transparent;
@@ -45,11 +45,15 @@
   &--large {
     padding-top: .5625rem;
     padding-bottom: .5625rem;
+    font-size: 18px;
+    line-height: 1.6;
   }
 
   &--small {
     padding-top: 0;
     padding-bottom: 0;
+    font-size: 14px;
+    line-height: 2;
   }
 
   &--block {
