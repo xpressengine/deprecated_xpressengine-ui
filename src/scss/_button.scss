@@ -1,32 +1,55 @@
-.#{$prefix}-button {
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-  }
+.#{$prefix}-button,
+[class*='#{$prefix}-button--'] {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  outline: 0;
+  font-size: .9375rem;
+  white-space: nowrap;
+}
 
 .#{$prefix}-button {
+  $block: &;
+
   display: inline-block;
   user-select: none;
   border: 1px solid transparent;
-  color: black; // @fixme
+  color: $text-color-dark; // @fixme
+  font-size: .9375rem;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  line-height: 30px;
-  padding: .2rem .6rem;
+  line-height: 1.75rem;
+  margin: 0;
+  padding: .25rem 1rem;
   border-radius: 0.3rem;
+  color: $primary;
   background-color: transparent;
 
   &:not([disabled]) {
     cursor: pointer;
   }
 
+  &:hover:not([disabled]) {
+    background-color: color-mask(0.08);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 .2rem rgba($primary, .2);
+  }
+
+  &:active {
+    box-shadow: inset 0 100px 5px rgba($primary, .16);
+  }
+
   &--large {
-    padding: .5rem 1rem;
+    padding-top: .5625rem;
+    padding-bottom: .5625rem;
   }
 
   &--small {
-    padding: 0 .5rem;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   &--block {
@@ -38,43 +61,122 @@
   }
 
   &--link {
-    &:hover,
+    &:hover:not([disabled]),
     &:focus {
       text-decoration: underline;
     }
   }
 
+  // Icon
   &__icon {
-    width: 1.875rem;
-    height: 1.875rem;
+    display: inline-block;
+    margin-left: -.25rem;
+    width: 1.5rem;
+    height: 1.75rem;
+    color: $text-color;
+  }
+
+  &--icon {
+    padding-left: .375rem;
+    padding-right: .375rem;
+
+    #{$block}__icon {
+      display: block;
+      margin: 0;
+      font-size: 24px;
+      [class^=xi-] {
+        line-height: inherit;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+  }
+  &__text + &__icon {
+    margin-left: 0;
+    margin-right: -.25rem;
   }
 }
 
 // Colors
 @each $color, $value in $theme-colors {
   .#{$prefix}-button {
+    $block: &;
+
     &--#{$color} {
+      outline: 0;
       border-color: $value;
-      color: $white;
+      color: $text-color-light;
       background-color: $value;
 
-      &:hover {
-        background-color: mix($value, $black, percentage(79 / 99));
+      &:hover:not([disabled]) {
+        background-color: color-mask(0.2, $value);
+      }
+      &:focus {
+        box-shadow: 0 0 0 .2rem rgba($value, .5);
+      }
+      &:active {
+        box-shadow: inset 0 100px 5px color-mask(0.4, $value);
+      }
+      &:disabled {
+        color: $text-color;
+        border-color: transparent;
+        background-color: $light;
+      }
+
+      #{$block}__icon {
+        color: #fff;
       }
     }
 
-    // outline
-    &--outline {
-      border-color: red; // @fixme
+    &--light {
+      color: $text-color;
     }
+
+    // outline
     &--outline-#{$color} {
+      color: $value;
       border-color: $value;
-      &:hover {
-        &:hover {
-          color: $white;
-          border-color: mix($value, $black, percentage(79 / 99));
-          background-color: mix($value, $black, percentage(79 / 99));
+
+      &:hover:not([disabled]) {
+        color: $white;
+        border-color: color-mask(0.2, $value);
+        background-color: color-mask(0.2, $value);
+      }
+      &:focus {
+        box-shadow: 0 0 0 .2rem rgba($value, .5);
+      }
+      &:active:not([disabled]) {
+        border-color: color-mask(0.4, $value);
+        box-shadow: inset 0 100px 5px color-mask(0.4, $value);
+      }
+      &:disabled {
+        border-color: $gray-v400;
+        color: $gray-v400;
+      }
+
+      &#{$block}--icon {
+        #{$block}__icon {
+          color: $value;
+          &:hover {
+            color: $white;
+          }
         }
+      }
+
+      &:hover:not(:disabled) {
+        #{$block}__icon {
+          color: $white;
+        }
+      }
+    }
+
+    &--outline-light {
+      color: $text-color;
+      border-color: $gray-v400;
+      &:hover:not([disabled]) {
+        color: $text-color;
       }
     }
   }
