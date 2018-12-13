@@ -48,6 +48,9 @@ $light: $gray-v100 !default;
 $info: #40aebf !default;
 $danger: #dd1126 !default;
 
+$black-38: rgba(0, 0, 0, .38);
+$black-87: rgba(0, 0, 0, .87);
+
 $theme-colors: (
   'primary':    $primary,
   'secondary':  $secondary,
@@ -104,3 +107,7 @@ $container-max-widths: map-merge(
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           24px !default;
+
+$text-color-dark: color-mask(.87);
+$text-color-light: #FFF;
+$text-color: $text-color-dark !default;
