@@ -32,7 +32,8 @@
 <body>
     <div class="xu-container">
         <h2>container</h2>
-        <p>6 columns</p>
+
+        <p>6컬럼 균등 분할</p>
         <div class="xu-row">
             <div class="xu-column">
                 col
@@ -54,7 +55,21 @@
             </div>
         </div>
 
-        <p>3 columns</p>
+        <p>3컬럼 균등 분할</p>
+        <div class="xu-row">
+            <div class="xu-column">
+                col
+            </div>
+            <div class="xu-column">
+                column--6
+            </div>
+            <div class="xu-column">
+                col
+            </div>
+        </div>
+
+        <p>3컬럼. 일부 크기 지정</p>
+        <p>크기가 지정된 컬럼 외에는 나머지 영역을 균등하게 나눠 영역을 차지 함</p>
         <div class="xu-row">
             <div class="xu-column">
                 col
@@ -66,8 +81,26 @@
                 col
             </div>
         </div>
+        <br>
+        <div class="xu-row">
+            <div class="xu-column">
+                col (나머지)
+            </div>
+            <div class="xu-column xu-column--lg-4">
+                column--lg-4
+            </div>
+        </div>
+        <p>(미구현) 7(왼쪽) + 4(오른쪽)로 구성하여 사이에 나머지 1컬럼 만큼 공간이 떨어져야 함</p>
+        <div class="xu-row">
+            <div class="xu-column xu-column--md-7">
+                column--md-7
+            </div>
+            <div class="xu-column xu-column--md-4">
+                column--md-4
+            </div>
+        </div>
 
-        <p>12 columns</p>
+        <p>컬럼 수 미지정. 균등 분할</p>
         <div class="xu-row">
             <div class="xu-column">
                 col
@@ -107,7 +140,9 @@
             </div>
         </div>
 
-        <p>18 columns <code>.xu-row--column-12</code></p>
+        <p>12컬럼 지정 분할</p>
+        <p>.row에 <code>.xu-row--column-12</code>를 지정하여 균등하게 분할하되 최대 12컬럼을 넘지 않도록 함</p>
+        <p>개행된 나머지 6개의 컬럼은 폭 전체를 차지하지 않고 12분할 기준의 너비를 가짐</p>
         <div class="xu-row xu-row--column-12">
             <div class="xu-column">
                 col
@@ -165,7 +200,9 @@
             </div>
         </div>
 
-        <p>12 columns <code>.xu-row--column-4.xu-row--xl-column-6</code></p>
+        <p>12컬럼 너비 지정</p>
+        <p><code>.--column-4.--xl-column-6</code></p>
+        <p>4컬럼 균등분할로 표시하되, xl 너비에서는 6컬럼 분할로 viewport에 따라 분리하여 지정</p>
         <div class="xu-row xu-row--column-4 xu-row--xl-column-6">
             <div class="xu-column">
                 col
@@ -204,126 +241,137 @@
                 col
             </div>
         </div>
+
+        <p>(미구현) 고정폭 너비 지정</p>
+        <div class="xu-row">
+            <div class="xu-column">
+                col
+            </div>
+            <div class="xu-column" style="width: 200px">
+                col width: 200px
+            </div>
+        </div>
+
     </div>
 
     <div class="xu-container-fluid">
-    <h3>container-fluid</h3>
+        <h3>container-fluid</h3>
 
     </div>
 
     <div class="xu-container">
 
-            <h1>Bootstrap grid examples</h1>
-            <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+        <h1>Bootstrap grid examples</h1>
+        <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
 
-            <h2>Five grid tiers</h2>
-            <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+        <h2>Five grid tiers</h2>
+        <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
 
-            <div class="xu-row">
-              <div class="xu-column--4">column--4</div>
-              <div class="xu-column--4">column--4</div>
-              <div class="xu-column xu-column--4">column--4</div>
-            </div>
+        <div class="xu-row">
+            <div class="xu-column--4">column--4</div>
+            <div class="xu-column--4">column--4</div>
+            <div class="xu-column xu-column--4">column--4</div>
+        </div>
 
-            <div class="xu-row">
-              <div class="xu-column xu-column--sm-4">column--sm-4</div>
-              <div class="xu-column xu-column--sm-4">column--sm-4</div>
-              <div class="xu-column xu-column--sm-4">column--sm-4</div>
-            </div>
+        <div class="xu-row">
+            <div class="xu-column xu-column--sm-4">column--sm-4</div>
+            <div class="xu-column xu-column--sm-4">column--sm-4</div>
+            <div class="xu-column xu-column--sm-4">column--sm-4</div>
+        </div>
 
-            <div class="xu-row">
-              <div class="xu-column xu-column--md-4">column--md-4</div>
-              <div class="xu-column xu-column--md-4">column--md-4</div>
-              <div class="xu-column xu-column--md-4">column--md-4</div>
-            </div>
+        <div class="xu-row">
+            <div class="xu-column xu-column--md-4">column--md-4</div>
+            <div class="xu-column xu-column--md-4">column--md-4</div>
+            <div class="xu-column xu-column--md-4">column--md-4</div>
+        </div>
 
-            <div class="xu-row">
-              <div class="xu-column xu-column--lg-4">column--lg-4</div>
-              <div class="xu-column xu-column--lg-4">column--lg-4</div>
-              <div class="xu-column xu-column--lg-4">column--lg-4</div>
-            </div>
+        <div class="xu-row">
+            <div class="xu-column xu-column--lg-4">column--lg-4</div>
+            <div class="xu-column xu-column--lg-4">column--lg-4</div>
+            <div class="xu-column xu-column--lg-4">column--lg-4</div>
+        </div>
 
-            <div class="xu-row">
-              <div class="xu-column xu-column--xl-4">column--xl-4</div>
-              <div class="xu-column xu-column--xl-4">column--xl-4</div>
-              <div class="xu-column xu-column--xl-4">column--xl-4</div>
-            </div>
+        <div class="xu-row">
+            <div class="xu-column xu-column--xl-4">column--xl-4</div>
+            <div class="xu-column xu-column--xl-4">column--xl-4</div>
+            <div class="xu-column xu-column--xl-4">column--xl-4</div>
+        </div>
 
-            <h2>Three equal columns</h2>
-            <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
-            <div class="xu-row">
-              <div class="xu-column xu-column--md-4">column--md-4</div>
-              <div class="xu-column xu-column--md-4">column--md-4</div>
-              <div class="xu-column xu-column--md-4">column--md-4</div>
-            </div>
+        <h2>Three equal columns</h2>
+        <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+        <div class="xu-row">
+            <div class="xu-column xu-column--md-4">column--md-4</div>
+            <div class="xu-column xu-column--md-4">column--md-4</div>
+            <div class="xu-column xu-column--md-4">column--md-4</div>
+        </div>
 
-            <h2>Three unequal columns</h2>
-            <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
-            <div class="xu-row">
-              <div class="xu-column xu-column--md-3">column--md-3</div>
-              <div class="xu-column xu-column--md-6">column--md-6</div>
-              <div class="xu-column xu-column--md-3">column--md-3</div>
-            </div>
+        <h2>Three unequal columns</h2>
+        <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+        <div class="xu-row">
+            <div class="xu-column xu-column--md-3">column--md-3</div>
+            <div class="xu-column xu-column--md-6">column--md-6</div>
+            <div class="xu-column xu-column--md-3">column--md-3</div>
+        </div>
 
-            <h2>Two columns</h2>
-            <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
-            <div class="xu-row">
-              <div class="xu-column xu-column--md-8">column--md-8</div>
-              <div class="xu-column xu-column--md-4">column--md-4</div>
-            </div>
+        <h2>Two columns</h2>
+        <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+        <div class="xu-row">
+            <div class="xu-column xu-column--md-8">column--md-8</div>
+            <div class="xu-column xu-column--md-4">column--md-4</div>
+        </div>
 
-            <h2>Full width, single column</h2>
-            <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+        <h2>Full width, single column</h2>
+        <p class="text-warning">No grid classes are necessary for full-width elements.</p>
 
-            <hr>
+        <hr>
 
-            <h2>Two columns with two nested columns</h2>
-            <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
-            <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
-            <div class="xu-row">
-              <div class="xu-column xu-column--md-8">
+        <h2>Two columns with two nested columns</h2>
+        <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+        <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+        <div class="xu-row">
+            <div class="xu-column xu-column--md-8">
                 column--md-8
                 <div class="xu-row">
-                  <div class="xu-column xu-column--md-6">column--md-6</div>
-                  <div class="xu-column xu-column--md-6">column--md-6</div>
+                    <div class="xu-column xu-column--md-6">column--md-6</div>
+                    <div class="xu-column xu-column--md-6">column--md-6</div>
                 </div>
-              </div>
-              <div class="xu-column xu-column--md-4">column--md-4</div>
             </div>
+            <div class="xu-column xu-column--md-4">column--md-4</div>
+        </div>
 
-            <hr>
+        <hr>
 
-            <h2>Mixed: mobile and desktop</h2>
-            <p>The Bootstrap v4 grid system has five tiers of classes: xs (extra small), sm (small), md (medium), lg (large), and xl (extra large). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
-            <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
-            <div class="xu-row">
-              <div class="xu-column xu-column--12 xu-column--md-8">column--12 column--md-8</div>
-              <div class="xu-column xu-column--6 xu-column--md-4">column--6 column--md-4</div>
-            </div>
-            <div class="xu-row">
-              <div class="xu-column xu-column--6 xu-column--md-4">column--6 column--md-4</div>
-              <div class="xu-column xu-column--6 xu-column--md-4">column--6 column--md-4</div>
-              <div class="xu-column xu-column--6 xu-column--md-4">column--6 column--md-4</div>
-            </div>
-            <div class="xu-row">
-              <div class="xu-column xu-column--6">column--6</div>
-              <div class="xu-column xu-column--6">column--6</div>
-            </div>
+        <h2>Mixed: mobile and desktop</h2>
+        <p>The Bootstrap v4 grid system has five tiers of classes: xs (extra small), sm (small), md (medium), lg (large), and xl (extra large). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
+        <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+        <div class="xu-row">
+            <div class="xu-column xu-column--12 xu-column--md-8">column--12 column--md-8</div>
+            <div class="xu-column xu-column--6 xu-column--md-4">column--6 column--md-4</div>
+        </div>
+        <div class="xu-row">
+            <div class="xu-column xu-column--6 xu-column--md-4">column--6 column--md-4</div>
+            <div class="xu-column xu-column--6 xu-column--md-4">column--6 column--md-4</div>
+            <div class="xu-column xu-column--6 xu-column--md-4">column--6 column--md-4</div>
+        </div>
+        <div class="xu-row">
+            <div class="xu-column xu-column--6">column--6</div>
+            <div class="xu-column xu-column--6">column--6</div>
+        </div>
 
-            <hr>
+        <hr>
 
-            <h2>Mixed: mobile, tablet, and desktop</h2>
-            <p></p>
-            <div class="xu-row">
-              <div class="xu-column xu-column--12 xu-column--sm-6 xu-column--lg-8">column--12 column--sm-6 column--lg-8</div>
-              <div class="xu-column xu-column--6 xu-column--lg-4">column--6 column--lg-4</div>
-            </div>
-            <div class="xu-row">
-              <div class="xu-column xu-column--6 xu-column--sm-4">column--6 column--sm-4</div>
-              <div class="xu-column xu-column--6 xu-column--sm-4">column--6 column--sm-4</div>
-              <div class="xu-column xu-column--6 xu-column--sm-4">column--6 column--sm-4</div>
-            </div>
+        <h2>Mixed: mobile, tablet, and desktop</h2>
+        <p></p>
+        <div class="xu-row">
+            <div class="xu-column xu-column--12 xu-column--sm-6 xu-column--lg-8">column--12 column--sm-6 column--lg-8</div>
+            <div class="xu-column xu-column--6 xu-column--lg-4">column--6 column--lg-4</div>
+        </div>
+        <div class="xu-row">
+            <div class="xu-column xu-column--6 xu-column--sm-4">column--6 column--sm-4</div>
+            <div class="xu-column xu-column--6 xu-column--sm-4">column--6 column--sm-4</div>
+            <div class="xu-column xu-column--6 xu-column--sm-4">column--6 column--sm-4</div>
+        </div>
 
-          </div>
+    </div>
 </body>
 </html>
