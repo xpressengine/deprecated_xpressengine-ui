@@ -139,6 +139,9 @@
 
     &--light {
       color: $text-color;
+      #{$block}__icon {
+        color: $text-color;
+      }
     }
 
     // outline
@@ -170,6 +173,7 @@
             color: $white;
           }
         }
+
       }
 
       &:hover:not(:disabled) {
@@ -184,6 +188,15 @@
       border-color: $gray-v400;
       &:hover:not([disabled]) {
         color: $text-color;
+        #{$block}__icon {
+          color: $text-color;
+        }
+      }
+
+      &#{$block}--icon {
+        #{$block}__icon {
+          color: $text-color;
+        }
       }
     }
   }
